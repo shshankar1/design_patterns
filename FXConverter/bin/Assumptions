@@ -1,0 +1,11 @@
+Assumptions:
+1. I have created my own code to parse csv because I am not sure if using 3rd party library is allowed or not
+2. Added csv for currency exchange rate and currency cross relationship matrix considering addition/modification/removal
+3. ExchangeRateService should be exposed as service and singleton in nature
+4. API is written by assuming that there will be scenario where conversion will happen like  
+	<Source_Currency> -> <Currency_1> -> <Currency_2> -> <Target_Currency>
+	Provided pdf has only scenario for USD or EURO conversion.
+5. For simplicity purpose I have added config file path into config. Ideally it should be passed through command line 
+   as JVM arguments.
+6. For decimal precision provided in pdf file, I have transformed that into another pattern
+   e.g. USD 2 <to> USD 0.00
